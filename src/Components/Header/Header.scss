@@ -1,0 +1,46 @@
+$bg-color: rgb(9, 9, 9);
+
+.header{
+    height: 100px;
+    background-color:$bg-color;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    box-sizing: border-box;
+    justify-content: space-between;
+
+    > img{
+    height: 100%;
+}
+}
+
+
+
+a{
+    // color: white;
+    text-decoration: none;
+}
+
+
+.Icon1{
+        color: white;
+        font-size: 2rem;
+        cursor: pointer;
+    }
+
+    .Icon1:hover{
+        color: rgba(179, 173, 202, 0.621);
+    }
+
+    .Tabs{
+        // border: 1px solid red;
+        width: 100%;
+        margin-left: 4vmax;
+        
+    }
+
+    .Tabs a{
+        margin: 2vmax;
+        font-size: 1.5rem;
+        font-weight: 300;
+    }
