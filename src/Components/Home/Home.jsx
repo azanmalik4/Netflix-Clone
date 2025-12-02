@@ -6,7 +6,6 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import { CiPlay1 } from "react-icons/ci";
 import { MdOutlinePlaylistAdd } from "react-icons/md";
 
-
 const apiKey = "7d61a6d8f1385de92535ac09fff03f9a";
 const url = "https://api.themoviedb.org/3";
 const upComing = "upcoming";
@@ -42,8 +41,7 @@ const Home = () => {
     const fetchUpComing = async () => {
       const {
         data: { results },
-      } = await axios.get(`${url}/movie/${upComing}?api_key=${apiKey}&page=4`);
-      console.log(results);
+      } = await axios.get(`${url}/movie/${upComing}?api_key=${apiKey}`);
       setUpcomingMovies(results);
     };
 
@@ -92,13 +90,21 @@ const Home = () => {
     <section className="home">
       <div
         className="banner"
-        style={{backgroundImage:`url(${`${imgUrl}/${popularMovies[0].poster_path}`})`}}>
+        style={{
+          backgroundImage: popularMovies[0]? `url(${`${imgUrl}/${popularMovies[0].poster_path}`})`: "rgb(16,16,16)",
+        }}
+      >
         {popularMovies[0] && <h1>{popularMovies[0].original_title}</h1>}
         {popularMovies[0] && <p>{popularMovies[0].overview}</p>}
         <div>
-        <button><CiPlay1/>Play </button>
-        <button>My List  <MdOutlinePlaylistAdd/> </button>
-</div>
+          <button>
+            <CiPlay1 />
+            Play{" "}
+          </button>
+          <button>
+            My List <MdOutlinePlaylistAdd />{" "}
+          </button>
+        </div>
       </div>
       <Row title={"UpComing movies on Netflix"} arr={upcomingMovies} />
       <Row title={"Now Playing on Netflix"} arr={nowPlayingMovies} />
