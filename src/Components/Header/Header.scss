@@ -1,46 +1,126 @@
-$bg-color: rgb(9, 9, 9);
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  background: transparent;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  transition: background-color 0.3s ease;
 
-.header{
-    height: 100px;
-    background-color:$bg-color;
+  &.scrolled {
+    background-color: #141414;
+  }
+
+  .logo-link {
+    display: inline-block;
+    cursor: pointer;
+
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+
+    .header_img {
+      height: 60px;
+      width: auto;
+      display: block;
+    }
+  }
+  .Tabs {
     display: flex;
+    gap: 30px;
     align-items: center;
-    padding: 1rem;
-    box-sizing: border-box;
-    justify-content: space-between;
+    padding-right: 40%;
 
-    > img{
-    height: 100%;
-}
-}
+    a {
+      color: #e5e5e5;
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: 500;
+      transition: color 0.3s ease;
+      position: relative;
+      font-size: 25px;
+      font-weight: 700;
 
-
-
-a{
-    // color: white;
-    text-decoration: none;
-}
-
-
-.Icon1{
+      &:hover {
         color: white;
-        font-size: 2rem;
-        cursor: pointer;
-    }
+      }
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: white;
+        transition: width 0.3s ease;
+      }
 
-    .Icon1:hover{
-        color: rgba(179, 173, 202, 0.621);
-    }
-
-    .Tabs{
-        // border: 1px solid red;
+      &:hover::after {
         width: 100%;
-        margin-left: 4vmax;
-        
+      }
+    }
+  }
+
+  .Icon1 {
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.15);
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 15px 20px;
+
+    .logo-link .header_img {
+      height: 30px;
     }
 
-    .Tabs a{
-        margin: 2vmax;
-        font-size: 1.5rem;
-        font-weight: 300;
+    .Tabs {
+      gap: 15px;
+
+      a {
+        font-size: 0.85rem;
+      }
     }
+
+    .Icon1 {
+      font-size: 30px !important;
+      width: 28px;
+  height: 28px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding: 10px 15px;
+
+    .logo-link .header_img {
+      height: 25px;
+    }
+
+    .Tabs {
+      gap: 10px;
+
+      a {
+        font-size: 0.75rem;
+      }
+    }
+
+    .Icon1 {
+      font-size: 18px;
+    }
+  }
+}
