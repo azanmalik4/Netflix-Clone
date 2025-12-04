@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./components/Home/Home";
+import Home from "./Components/Home/Home"
 import Header from './Components/Header/Header'
 import MovieDetail from "./components/MovieDetails/MovieDetails";
 import TVShows from "./components/TVShows/TvShows";
@@ -18,7 +18,7 @@ function App() {
       <div className="App">
         <Header/>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home/>} />
           <Route path="/movie/:id" element={<MovieDetail/>} />
           <Route path="/genre/:id" element={<GenrePage/>} />
           <Route path="/tvshows" element={<TVShows/>} />
