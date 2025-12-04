@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import "./TVShows.scss";
+import "./TvShows.scss";
 
 const apiKey = "7d61a6d8f1385de92535ac09fff03f9a";
 const url = "https://api.themoviedb.org/3";

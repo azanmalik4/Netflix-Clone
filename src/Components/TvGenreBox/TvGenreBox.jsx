@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
-import "./TVGenreBox.scss";
+import "./TvGenreBox.scss"
 import { MdArrowBack } from "react-icons/md";
 
 const apiKey = "7d61a6d8f1385de92535ac09fff03f9a";

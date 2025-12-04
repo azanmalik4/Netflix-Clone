@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
-import "./TVShowDetails.scss";
+import "./TvShowDetails.scss";
 import { CiPlay1 } from "react-icons/ci";
 import { MdOutlinePlaylistAdd, MdArrowBack, MdCheck } from "react-icons/md";
 
