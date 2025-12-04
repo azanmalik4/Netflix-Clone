@@ -2,13 +2,13 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./Components/Home/Home"
 import Header from './Components/Header/Header'
-import MovieDetail from "./components/MovieDetails/MovieDetails";
-import TVShows from "./components/TVShows/TvShows";
-import TVShowDetail from "./components/TvShowDetails/TvShowDetails";
-import TVGenrePage from "./components/TvGenreBox/TvGenreBox";
-import Movies from "./components/Movies/Movies";
-import RecentlyAdded from "./components/RecentlyAdded/RecentlyAdded";
-import MyList from "./components/MyList/MyList";
+import MovieDetail from "./Components/MovieDetails/MovieDetails";
+import TVShows from "./Components/TVShows/TvShows";
+import TVShowDetail from "./Components/TvShowDetails/TvShowDetails";
+import TVGenrePage from "./Components/TvGenreBox/TvGenreBox";
+import Movies from "./Components/Movies/Movies";
+import RecentlyAdded from "./Components/RecentlyAdded/RecentlyAdded";
+import MyList from "./Components/MyList/MyList";
 import GenrePage from "./Components/GenrePage/GenrePage";
 import "./App.scss";
 
